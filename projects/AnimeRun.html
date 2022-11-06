@@ -139,7 +139,7 @@
                     <tr>
                         <td>Paper PDF (TBD)
                                 </td>
-                        <td><a href='https://github.com/lisiyao21/AnimeRun' target="_blank">Python API </a></td>
+                        <td><a href='https://github.com/lisiyao21/AnimeRun' target="_blank">Code</a></td>
                         <td><a href='https://drive.google.com/file/d/1KKuAB_pLuGmRBKjtmYztJnmch2sdi3Qj/view?usp=sharing' target="_blank">Download Data</a></td>
                     </tr>
                 </table>
@@ -152,57 +152,134 @@
             </div>
 
             <div class="details table">
-            <p align='center'>Table 1: Data Splits based on Subjects.</p>
+            <p align='center'>Table 1: Data Overview</p>
             <table style="margin: 0px auto;">
             <thead>
             <tr>
-            <th><div style="width:100px"></div></th>
-            <th align="right">Frame Amount</th>
-            <th align="right">Average Magnitude</th>
-            <th align="right">Average Segment Amount</th>
+            </tr>
+            <tr>
+            <td style="width:15%"> <b>Film</b></th>
+            <td align="right"><b>Clip #</b></th>
+            <td align="right"><b>Frame #</b></th>
+            <td align="right" ><b>Avg. Motion Magnitude</b></th>
+            <td align="right" ><b>Avg. Segment #</b></th>
             </tr>
             </thead>
             <tbody>
             <tr>
-            <td>Images</td>
-            <td align="right">6,420,059</td>
-            <td align="right">508,234</td>
-            <td align="right">3,179,722</td>
+            <td><i>Agent 327</i></td>
+            <td align="right">8</td>
+            <td align="right">741</td>
+            <td align="right">14.55</td>
+            <td align="right">409</td>
             </tr>
             <tr>
-            <td>Sequences</td>
-            <td align="right">868</td>
-            <td align="right">70</td>
-            <td align="right">470</td>
+            <td><i>Caminandes 3</i></td>
+            <td align="right">16</td>
+            <td align="right">1565</td>
+            <td align="right">24.53</td>
+            <td align="right">152</td>
             </tr>
             <tr>
-            <td>Subjects</td>
-            <td align="right">20*</td>
-            <td align="right">20*</td>
-            <td align="right">10</td>
+            <td><i>Sprite Fright</i></td>
+            <td align="right">6</td>
+            <td align="right">513</td>
+            <td align="right">10.01</td>
+            <td align="right">250</td>
             </tr>
+            <tr>
+                <td><i>All</i></td>
+                <td align="right">30</td>
+                <td align="right">2891</td>
+                <td align="right">19.27</td>
+                <td align="right">237</td>
+                </tr>
+
             </tbody>
             </table>
             </div>
+
+            <div class='details links-table'>
+                <table>
+                    <tr>
+                        <td height="100">
+                            <div>
+                                <img src='./animerun/images/color.jpg' height="100">
+                            </div>
+                        </td>
+
+                        <td height="100">
+                            <div>
+                                <img src='./animerun/images/line.jpg' height="100">
+                            </div>
+                        </td>
+
+                        <td height="100">
+                            <div>
+                                <img src='./animerun/images/flow.jpg' height="100">
+                            </div>
+                        </td>
+                        <td wheight="100">
+                            <div>
+                                <img
+                                     src='./animerun/images/seg.jpg' height="100">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">2D Cartoon
+                                </td>
+                        <td align="center">Contour line</td>
+                        <td align="center">Optical Flow</td>
+                        <td align="center">Segmentation and Segment Matching </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                                </td>
+                        <td align="center"></td>
+                        <td align="center"></td>
+                        <td align="center">of adjancent frames</td>
+                    </tr>
+                    
+                </table>
+                <p align='center'>Figure 1: AnimeRun Composition.</p>
+            </div>
+
         <section class='section'>
+            <div class="section-title">
+                Examples
+            </div>
+            TBD 
+
+
+        <!-- <section class='section'>
             <div class="section-title">
                 Benchmark
             </div>
         TBD
 
-        </section>   
+        </section>    -->
 
         <section class='section'>
             <div class="section-title">
                 Citation
             </div>
-            
+            <div class="details">
+            <pre>@inproceedings{animerun,
+                title={AnimeRun: 2D Animation Visual Correspondence from Open Source 3D Movies},
+                author={Siyao, Li and Li, Yuhang and Li, Bo and Dong, Chao and Liu, Ziwei and Loy, Chen Change},
+                booktitle={Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+                year={2022}
+              }
+            </pre>
+        </div>
         </section>   
 
         <section class='section'>
             <div class="section-title">
                 Licence
             </div>
+            Dataset is released under CC-BY-NC 4.0 License. Code is released under MIT License.
             
         </section>   
 
