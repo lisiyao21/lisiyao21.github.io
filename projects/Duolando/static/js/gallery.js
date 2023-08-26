@@ -1,15 +1,15 @@
 const search = document.querySelector(".search-box input"),
-      images = document.querySelectorAll(".image-box");
-
+      dances = document.querySelectorAll(".dance-box");
 search.addEventListener("keyup", e =>{
     if(e.key == "Enter"){
         let searcValue = search.value,
             value = searcValue.toLowerCase();
-            images.forEach(image =>{
-                if(value === image.dataset.name){ //matching value with getting attribute of images
-                    return image.style.display = "block";
+            dances.forEach(dance =>{
+                dance_genre_name = dance.dataset.name.toLowerCase();
+                if(value === dance_genre_name){ //matching value with getting attribute of dances
+                    return dance.style.display = "block";
                 }
-                image.style.display = "none";
+                dance.style.display = "none";
             });
     }
 });
@@ -17,7 +17,7 @@ search.addEventListener("keyup", e =>{
 search.addEventListener("keyup", () =>{
     if(search.value != "") return;
 
-    images.forEach(image =>{
-        image.style.display = "block";
+    dances.forEach(dance =>{
+        dance.style.display = "block";
     })
 })

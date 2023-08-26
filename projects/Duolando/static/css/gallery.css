@@ -42,32 +42,32 @@
   font-size: 22px;
   transform: translateY(-50%);
 }
-.container .images .image-box {
+.container .dances .dance-box {
   position: relative;
   height: 350px;
   width: 280px;
   border-radius: 8px;
   overflow: hidden;
 }
-.images {
+.dances {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.images .image-box {
+.dances .dance-box {
   margin: 12px;
 }
-.images .image-box img {
+.dances .dance-box img {
   height: 100%;
   width: 100%;
   border-radius: 6px;
   transition: transform 0.2s linear;
 }
-.image-box:hover img {
+.dance-box:hover img {
   transform: scale(1.05);
 }
-.image-box h6 {
+.dance-box h6 {
   position: absolute;
   bottom: 10px;
   left: 10px;
