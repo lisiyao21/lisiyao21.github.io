@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Duolando: Follower GPT with Off-Policy Reinforcement Learning to Accompany a Dance">
+  <meta name="keywords" content="Motion Generation, Music to Dance, GPT, VQVAE, Reinforcement Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duolando: Follower GPT with Off-Policy Reinforcement Learning to Accompany a Dance</title>
+
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Duolando: Follower GPT with Off-Policy Reinforcement Learning to Accompany a Dance</h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://lisiyao21.github.io/">Li Siyao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://gutianpei.github.io/">Tianpei Gu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=XbFxzicAAAAJ&hl">Zhengyu Lin</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/Maoxie">Zhitao Yang</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup>1</sup>,
+            </span>
+            <br/>
+            <span class="author-block">
+              <a href="https://henghuiding.github.io/">Henghui Ding</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+		      <a href="https://yanglei.me/">Lei Yang </a><sup>3,4✉</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy </a><sup>1✉</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>S-Lab, Nanyang Technological University,</span>
+            <span class="author-block"><sup>2</sup>Lexica</span>
+            <span class="author-block"><sup>3</sup>SenseTime</span>
+            <span class="author-block"><sup>4</sup>Shanghai AI Laboratory</span>
+          </div>
+          <ul class="list-unstyled name-list">
+              <li>✉corresponding author</li>
+          </ul>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!--
+              <span class="link-block">
+                <a href="A_PDF_LINK"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="AN_ARXIV_LINK"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              -->
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/RnwJVHKPAtw?si=GjUz4vyb5riPlsjf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/lisiyao21/Duolando"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1_Ln75IlMwqLI1BTZHTHP8DNA3L4ySkC_/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Teaser Video/GIF Auto-play
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Some sample videos/gifs rolling?
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce a novel task within the field of human motion generation, termed dance accompaniment, which necessitates the generation of responsive movements from a dance partner, the "follower", synchronized with the lead dancer's movements and the underlying musical rhythm.
+          </p>
+          <p>
+            Unlike existing solo or group dance generation tasks, a duet dance scenario entails a heightened degree of interaction between the two participants, requiring delicate coordination in both pose and position.
+            To support this task, we first build a large-scale and diverse duet interactive dance dataset, DD100, by recording about 115.4 minutes.
+          </p>
+          <p>
+            To address the challenges inherent in this task, we propose a GPT-based model, Duolando, which autoregressively predicts the subsequent tokenized motion conditioned on the coordinated information of the music, the leader's and the follower's movements. 
+            To further enhance the GPT's capabilities of generating stable results on unseen conditions (music and leader motions), we devise an off-policy reinforcement learning strategy that allows the model to explore viable trajectories from out-of-distribution samplings, guided by human-defined rewards.
+            Based on the collected dataset and proposed method, we establish a benchmark with several carefully designed metrics.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe class='video' style="width:100%" src="https://www.youtube.com/embed/RnwJVHKPAtw"
+              title="NeurIPS 2023: Duolando: Follower GPT with Off-Policy Reinforcement Learning to Accompany a Dance"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class='section'>
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">AR Demo (OOD)</h2>
+        <div class="publication-video">
+          <iframe class='video' style="width:100%" src="https://www.youtube.com/embed/iE4sOf8Lkyo"
+              title="Duolando AR (OOD) demo" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class='section'>
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Data Examples (Quick Scan)</h2>
+        <div>
+        This section showcases clips from 10 dance genres in the DD100 dataset.
+		<div><a href="./gallery.html" style="color:cornflowerblue;padding:0;border:none;background:none">▶ More Examples on DD100 Gallery</a></div>
+		<table>
+		    <tr style="display:table-row">
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/0RDJUOyM3OU?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Foxtrot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Foxtrot</span>
+		            </div>
+        		</td>
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/XnRPSB9k7AM?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Quickstep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Quickstep</span>
+		            </div>
+        		</td>
+			</tr>
+		    <tr style="display:table-row">
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/OgAPQ81hDjw?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Tango" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Tango</span>
+		            </div>
+        		</td>
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/wkZlvyPlo6Q?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Waltz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Waltz</span>
+		            </div>
+        		</td>
+			</tr>
+		    <tr style="display:table-row">
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/3LJnWhrQK0c?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Qiaqiaqia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Cha Cha</span>
+		            </div>
+        		</td>
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/fsHVpTbO2D0?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show PasoDable" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">PasoDable</span>
+		            </div>
+        		</td>
+			</tr>
+		    <tr style="display:table-row">
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/gw042aThsE4?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Lumba" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Lumba</span>
+		            </div>
+        		</td>
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/uUioReX0QUY?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Samba" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Samba</span>
+		            </div>
+        		</td>
+			</tr>
+		    <tr style="display:table-row">
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/XULbn9ksKDA?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Jive" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Jive</span>
+		            </div>
+        		</td>
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/iXnkk6_bA14?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show SwanLake" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Ballet</span>
+		            </div>
+        		</td>
+			</tr>
+		</table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop content">
+    <div class="column is-full-width">
+      <h2 class="title is-3">GPT</h2>
+        
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<!--<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Li Siyao, Tianpei Gu, Zhengyu Lin, Zhitao Yang, Ziwei Liu, Henghui Ding, Lei Yang, Chen Change Loy},
+  title     = {Duolando: Follower GPT with Off-Policy Reinforcement Learning to Accompany a Dance},
+  year      = {2023},
+}</code></pre>
+  </div>
+</section>-->
+
+<a href="https://clustrmaps.com/site/1bw7i" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=n-n7Th0GYNFRk5BgId8OFr4FiXf2c7Y-u9qbKjwrwGk&cl=ffffff" style="display:none" ></a>
+<section class='section'>
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">License</h2>
+        <div>
+		Dataset is released under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0 License</a>.
+    	Code will be released under Apache-2.0 License.
+	    </div>
+      </div>
+    </div>
+  </div>
+</section>   
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The website template was borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
