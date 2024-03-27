@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Duolando: Follower GPT with Off-Policy Reinforcement Learning to Accompany a Dance">
+        content="Duolando: Follower GPT with Off-Policy Reinforcement Learning to Dance Accompaniment">
   <meta name="keywords" content="Motion Generation, Music to Dance, GPT, VQVAE, Reinforcement Learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Duolando: Follower GPT with Off-Policy Reinforcement Learning to Accompany a Dance</title>
+  <title>Duolando: Follower GPT with Off-Policy Reinforcement Learning to Dance Accompaniment</title>
 
 
   <script>
@@ -47,7 +47,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">Duolando: Follower GPT with Off-Policy Reinforcement Learning to Accompany a Dance</h1>
+          <h1 class="title is-2 publication-title">Duolando: Follower GPT with Off-Policy Reinforcement Learning to Dance Accompaniment</h1>
+          <h2 class="title is-4 publication-title">ICLR 2024</h2>
           <div class="is-size-4 publication-authors">
             <span class="author-block">
               <a href="https://lisiyao21.github.io/">Li Siyao</a><sup>1</sup>,</span>
@@ -86,8 +87,8 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <!--
+              <!-- PDF Link. --> 
+      
               <span class="link-block">
                 <a href="A_PDF_LINK"
                    class="external-link button is-normal is-rounded is-dark">
@@ -97,7 +98,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="AN_ARXIV_LINK"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -105,16 +106,16 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
-              -->
+              </span> -->
+             
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://youtu.be/RnwJVHKPAtw?si=GjUz4vyb5riPlsjf"
+                <a href="https://youtu.be/Y2zksX3cSCw"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video (TBD)</span>
+                  <span>Video</span>
                 </a>
               </span>
               <!-- Code Link. -->
@@ -124,25 +125,19 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (TBD)</span>
+                  <span>Code</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-               
+                <a href="https://drive.google.com/file/d/1sWc1MeRhRa9LoxarsJVFvt5vxsRk-F_M/view?usp=sharing"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data (TBD)</span>
+                  <span>Data</span>
             
-              <span class="link-block">
-               
-                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data (OneDrive) (TBD)</span>
+
            
             </div>
 
@@ -191,12 +186,23 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce a novel task within the field of human motion generation, termed dance accompaniment, which necessitates the generation of responsive movements from a dance partner, the "follower", synchronized with the lead dancer's movements and the underlying musical rhythm.
-            Unlike existing solo or group dance generation tasks, a duet dance scenario entails a heightened degree of interaction between the two participants, requiring delicate coordination in both pose and position.
-            To support this task, we first build a large-scale and diverse duet interactive dance dataset, DD100, by recording about 115.4 minutes.
-            To address the challenges inherent in this task, we propose a GPT-based model, Duolando, which autoregressively predicts the subsequent tokenized motion conditioned on the coordinated information of the music, the leader's and the follower's movements. 
-            To further enhance the GPT's capabilities of generating stable results on unseen conditions (music and leader motions), we devise an off-policy reinforcement learning strategy that allows the model to explore viable trajectories from out-of-distribution samplings, guided by human-defined rewards.
-            Based on the collected dataset and proposed method, we establish a benchmark with several carefully designed metrics.
+            We introduce a novel task within the field of 3D dance generation, termed dance
+accompaniment, which necessitates the generation of responsive movements from
+a dance partner, the "follower", synchronized with the lead dancer's movements
+and the underlying musical rhythm. Unlike existing solo or group dance generation
+tasks, a duet dance scenario entails a heightened degree of interaction between the
+two participants, requiring delicate coordination in both pose and position. To sup-
+port this task, we first build a large-scale and diverse duet interactive dance dataset,
+DD100, by recording about 117 minutes of professional dancers' performances.
+To address the challenges inherent in this task, we propose a GPT-based model,
+Duolando, which autoregressively predicts the subsequent tokenized motion condi-
+tioned on the coordinated information of the music, the leader's and the follower's
+movements. To further enhance the GPT's capabilities of generating stable results
+on unseen conditions (music and leader motions), we devise an off-policy rein-
+forcement learning strategy that allows the model to explore viable trajectories
+from out-of-distribution samplings, guided by human-defined rewards. Based on
+the collected dataset and proposed method, we establish a benchmark with several
+carefully designed metrics.
           </p>
         </div>
       </div>
@@ -208,8 +214,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe class='video' style="width:100%" src="https://www.youtube.com/embed/RnwJVHKPAtw"
-              title="NeurIPS 2023: Duolando: Follower GPT with Off-Policy Reinforcement Learning to Accompany a Dance"
+          <iframe class='video' style="width:100%" src="https://www.youtube.com/embed/Y2zksX3cSCw?si=SijgU5rUtLArB_nm"
+              title="ICLR 2024: Duolando: Follower GPT with Off-Policy Reinforcement Learning for Dance Accompaniment"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
           </iframe>
@@ -221,7 +227,7 @@
 </section>
 
 
-<section class='section'>
+<!-- <section class='section'>
   <div class="container is-max-desktop content">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -235,7 +241,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class='section'>
