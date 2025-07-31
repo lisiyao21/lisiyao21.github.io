@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Half-Physics: Enabling Kinematic 3D Human Model with Physical Interactions">
+  <meta name="keywords" content="Motion Generation, Music to Dance, GPT, VQVAE, Reinforcement Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Half-Physics: Enabling Kinematic 3D Human Model with Physical Interactions</title>
+
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Half-Physics: Enabling Kinematic 3D Human Model with Physical Interactions</h1>
+          <h2 class="title is-4 publication-title">Arxiv 2025</h2>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://lisiyao21.github.io/">Li Siyao</a><sup>1,2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://yfeng95.github.io/">Yao Feng</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://otaheri.github.io/">Omid Taheri</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://is.mpg.de/ps/person/black">Michael J. Black</a><sup>1</sup>
+            </span>
+
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Max Planck Institute for Intelligent Systems
+            </span>
+            <span class="author-block"><sup>2</sup>   S-Lab, Nanyang Technological University</span>
+            <span class="author-block"><sup>3</sup>   Stanford</span>
+          </div>
+          <ul class="list-unstyled name-list">
+              <li>*work done during internship at MPI-IS</li>
+          </ul>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. --> 
+      
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Preprint</span>
+                </a>
+              </span>
+
+             
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/QAqiqR0l3IM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/lisiyao21/Half-Physics"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://drive.google.com/file/d/1sWc1MeRhRa9LoxarsJVFvt5vxsRk-F_M/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+            </a> -->
+
+           
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/imgs/hp_teaser3.gif" alt="Teaser GIF" style="height: 90%;">
+      <h2 class="subtitle has-text-centered">
+        Half Physics enables kinematical SMPL-X plysically interact with the environment
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Some sample videos/gifs rolling?
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            While current general-purpose 3D human models (e.g., SMPL-X) efficiently represent 
+            accurate human shape and pose, they lacks the ability to physically interact
+            with the environment due to the kinematic nature. As a result, kinematic-based
+            interaction models often suffer from issues such as interpenetration and unrealistic
+            object dynamics. To address this limitation, we introduce a novel approach that
+            embeds SMPL-X into a tangible entity capable of dynamic physical interactions
+            with its surroundings. Specifically, we propose a “half-physics” mechanism that
+            transforms 3D kinematic motion into a physics simulation. Our approach maintains
+            kinematic control over inherent SMPL-X poses while ensuring physically plausible
+            interactions with scenes and objects, effectively eliminating penetration and
+            unrealistic object dynamics. Unlike reinforcement learning-based methods, which
+            demand extensive and complex training, our half-physics method is learning-free
+            and generalizes to any body shape and motion; meanwhile, it operates in real
+            time. Moreover, it preserves the fidelity of the original kinematic motion while
+            seamlessly integrating physical interactions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe class='video' style="width:100%" src="https://www.youtube.com/embed/QAqiqR0l3IM?si=IdxYqH4m8qkF5Vgh"
+              title="Half-Physics: Enbabling Kinematic 3D Human Model with Physical Interactions"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<!-- <section class='section'>
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">AR Demo (OOD)</h2>
+        <div class="publication-video">
+          <iframe class='video' style="width:100%" src="https://www.youtube.com/embed/Kd-ix1yQEoQ?si=b0WRG0FCCmacYulX"
+              title="Duolando AR (OOD) demo" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class='section'>
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Data Examples (Quick Scan)</h2>
+        <div>
+        This section showcases clips from 10 dance genres in the DD100 dataset.
+		<div><a href="./gallery.html" style="color:cornflowerblue;padding:0;border:none;background:none">▶ More Examples on DD100 Gallery</a></div>
+		<table>
+		    <tr style="display:table-row">
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/0RDJUOyM3OU?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Foxtrot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Foxtrot</span>
+		            </div>
+        		</td>
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/XnRPSB9k7AM?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Quickstep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Quickstep</span>
+		            </div>
+        		</td>
+			</tr>
+		    <tr style="display:table-row">
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/OgAPQ81hDjw?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Tango" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Tango</span>
+		            </div>
+        		</td>
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/wkZlvyPlo6Q?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Waltz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Waltz</span>
+		            </div>
+        		</td>
+			</tr>
+		    <tr style="display:table-row">
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/3LJnWhrQK0c?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Qiaqiaqia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Cha Cha</span>
+		            </div>
+        		</td>
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/fsHVpTbO2D0?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show PasoDable" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">PasoDable</span>
+		            </div>
+        		</td>
+			</tr>
+		    <tr style="display:table-row">
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/gw042aThsE4?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Lumba" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Lumba</span>
+		            </div>
+        		</td>
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/uUioReX0QUY?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Samba" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Samba</span>
+		            </div>
+        		</td>
+			</tr>
+		    <tr style="display:table-row">
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/XULbn9ksKDA?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show Jive" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Jive</span>
+		            </div>
+        		</td>
+		        <td>
+		            <div>
+						<iframe src="https://www.youtube.com/embed/iXnkk6_bA14?list=PLO2y5ex4snyG7FfkkuNpKXfZmqKX_1VrY" title="quick show SwanLake" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            </div>
+		            <div style="text-align: center; font-size: large;">
+		                <span style="font-style:italic">Ballet</span>
+		            </div>
+        		</td>
+			</tr>
+		</table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="section">
+  <div class="container is-max-desktop content">
+    <div class="column is-full-width">
+      <h2 class="title is-3">GPT</h2>
+        
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{siyao2025halfphysics,
+  author    = {Li Siyao, Yao Feng, Omid Taheri, Chen Change Loy, Michael J. Black},
+  title     = {Half-Physics: Enabling Kinematic 3D Human Model with Physical Interactions},
+  booktitle = {arxiv},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+<a href="https://clustrmaps.com/site/1bw8l" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=gyNaovoCDCnFAlIcQkc_74fe9iuwCBzj29JNZY0oo08&cl=ffffff"  height="1" width="1"></a>
+<section class='section'>
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">License</h2>
+        <div>
+		Code is released under MIT License.
+	    </div>
+      </div>
+    </div>
+  </div>
+</section>   
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The website template was borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
